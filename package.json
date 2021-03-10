@@ -1,0 +1,44 @@
+{
+  "name": "sudoku-solver",
+  "version": "1.0.0",
+  "description": "A small program to acquaint myself with making a sudoku solver",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:fix": "npm run lint:eslint -- --fix && npm run lint:prettier -- --write",
+    "lint:eslint": "eslint --ext .ts ./",
+    "lint:prettier": "prettier --list-different --ignore-path .gitignore './**/*.{js,json,md}'",
+    "test": "mocha --require ts-node/register --project ./tsconfig.json 'test/**/*.test.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdkitzman/node-sudoku-solver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mdkitzman/node-sudoku-solver/issues"
+  },
+  "homepage": "https://github.com/mdkitzman/node-sudoku-solver#readme",
+  "author": "Mike Kitzman",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^7.0.0",
+    "date-period": "^3.0.0",
+    "ts-node": "^8.9.0",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.20.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "mocha": "^7.1.1",
+    "prettier": "^2.2.1"
+  }
+}
